@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Katherine McNeil">
+    <meta name="description" content="Explore Katherine McNeil's featured projects and work.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Katherine McNeil</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #2c2c2c;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2a2a2a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #84d7f7;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        nav ul li {
+            margin: 0 12px;
+        }
+
+        nav ul li a {
+            color: #eaeaea;
+            font-size: 1rem;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            background-color: #84d7f7;
+            color: #1a1a1d;
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 720px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .content-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            margin: 30px auto;
+            border-radius: 12px;
+            max-width: 1000px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content-section h2 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: #1e1e1e;
+        }
+
+        .projects-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-card a {
+            background-color: #84d7f7;
+            color: #1a1a1d;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #50c0e8;
+        }
+
+        .ebook-section {
+            margin-top: 60px;
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .ebook-section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .ebook-section p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+
+        .ebook-section img {
+            width: 320px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #1a1a1d;
+            color: #eaeaea;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: 40px;
+        }
+
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        footer nav ul li {
+            margin: 0 10px;
+        }
+
+        footer nav ul li a {
+            color: #84d7f7;
+            text-decoration: none;
+        }
+
+        footer nav ul li a.active {
+            color: #f7a072;
+        }
+
+        footer nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-image: url('images/projects-hero.jpg');">
+        <div class="hero-content">
+            <h2>Featured Projects 💻✨</h2>
+            <p>Explore some of my favorite projects showcasing my skills in web development and design.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>My Work</h2>
+        <div class="projects-gallery">
+            <div class="project-card">
+                <img src="images/jack.png" alt="Jack Skellington Project">
+                <h3>Jack Skellington Project 🎃</h3>
+                <p>An engaging web animation project featuring Jack Skellington-themed elements and interactive visuals.</p>
+                <a href="https://github.com/your-github/jack-skellington-project" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/tarrot.png" alt="Mystic Tarot Reader">
+                <h3>Mystic Tarot Reader 🔮</h3>
+                <p>A magical tarot reading web application with animated cards, mystical designs, and interactive readings.</p>
+                <a href="https://github.com/your-github/mystic-tarot-reader" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/recipe.png" alt="Ivy's Recipe Finder">
+                <h3>Ivy's Recipe Finder 🍳</h3>
+                <p>An interactive website that helps you find recipes, designed for my daughter. Where she can change or update at anytime.</p>
+                <a href="https://github.com/your-github/ivys-recipe-finder" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ebook-section">
+        <h2>My E-Book 📖</h2>
+        <p>Discover my children's book <strong>"A Kitten Named Mouse"</strong> – a heartwarming story inspired by my cat, Mouse. It’s a tale of adventure, friendship, and finding home.</p>
+        <a href="https://kathmargaret.gumroad.com/l/sjjzkj" target="_blank">
+            <img src="images/ebook.png" alt="Cover of A Kitten Named Mouse E-Book">
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 <a href="about.html">Katherine McNeil</a> | Passionate about learning and creating ✨</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p><a href="#">Back to Top</a></p>
+    </footer>
+</body>
+</html>
